@@ -1,8 +1,8 @@
-const pesertaRepository = require('../repositories/pesertaRepository');
+const pesertaRepository = require('../repositories/seminarRepository');
 
 const getAllPeserta = async () => {
     try{
-        const pesertas = pesertaRepository.getAllPeserta();
+        const pesertas = seminarRepository.getAllPeserta();
         return pesertas;
     }
     catch(err){
@@ -12,7 +12,7 @@ const getAllPeserta = async () => {
 
 const createPeserta = async (data) => {
     try{
-        const peserta = pesertaRepository.createPeserta(data);
+        const peserta = seminarRepository.createPeserta(data);
         return peserta;
     }
     catch(err){
@@ -22,7 +22,7 @@ const createPeserta = async (data) => {
 
 const updatePeserta = async (data, id) => {
     try{
-        const peserta = pesertaRepository.updatePeserta(data, id);
+        const peserta = seminarRepository.updatePeserta(data, id);
         return peserta;
     }
     catch(err){
@@ -30,9 +30,10 @@ const updatePeserta = async (data, id) => {
     }
 }
 
+
 const deletePeserta = async (id) => {
     try{
-        const peserta = pesertaRepository.deletePeserta(nrp);
+        const peserta = seminarRepository.deletePeserta(id);
         return peserta;
     }
     catch(err){

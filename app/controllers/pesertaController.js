@@ -5,7 +5,7 @@ const getAllPeserta = (req, res) => {
     .then(pesertas => {
         res.status(200).json({
             status: 'success',
-            message: 'Success get all data peserta',
+            message: 'Success get all list peserta',
             data: pesertas
         })
     })
@@ -45,31 +45,23 @@ const createPeserta = (req, res) => {
 }
 
 const updatePeserta = (req, res) => {
-    const data = req.body;
-    const id = req.params.nrp;
-    pesertaService.updatePeserta(data, id)
-    .then(peserta => {
-        if(!peserta){
-            res.status(400).json({
-                status: 'error',
-                message: 'Failed update peserta',
-                data: peserta
-            })
-        }
+    pesertaService.updatePeserta(req.params.id, req.body)
+      .then((peserta) => {
         res.status(200).json({
-            status: 'success',
-            message: 'Success update peserta',
-            data: peserta
-        })
-    })
-    .catch(err => {
+          status: "success",
+          message: "peserta updated successfully",
+          data: peserta,
+        });
+      })
+      .catch((error) => {
         res.status(500).json({
-            status: 'error',
-            message: 'internal server error',
-            data: err
-        })
-    })
-}
+          status: "error",
+          message: error.message,
+          data: error,
+        });
+      });
+  };
+
 
 const deletePeserta = (req, res) => {
     pesertaService.deletePeserta(req.params.id)
@@ -95,3 +87,4 @@ const deletePeserta = (req, res) => {
     updatePeserta,
     deletePeserta
 }
+

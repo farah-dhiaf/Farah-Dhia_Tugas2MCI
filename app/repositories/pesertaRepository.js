@@ -8,7 +8,7 @@ const createPeserta = (data) => {
     return peserta.create(data)
 }
 
-const updatePeserta = (data, id) => {
+const updatePeserta = (id, data) => {
     return peserta.update(data, {
         where: {
             id: id
