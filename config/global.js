@@ -8,9 +8,9 @@ const db_host = process.env.DB_HOST;
 const db_url = process.env.DB_URL;
 
 module.exports = { 
-db_name, 
-db_user, 
-db_pass, 
-db_port, 
-db_host 
+    db_name, 
+    db_user, 
+    db_pass, 
+    db_port, 
+    db_host 
 };
