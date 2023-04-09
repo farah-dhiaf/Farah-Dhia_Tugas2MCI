@@ -2,11 +2,11 @@ const pesertaService = require('../services/pesertaService')
 
 const getAllPeserta = (req, res) => {
     pesertaService.getAllPeserta()
-    .then(peserta => {
+    .then(pesertas => {
         res.status(200).json({
             status: 'success',
             message: 'Success get all list peserta',
-            data: peserta
+            data: pesertas
         })
     })
     .catch(err => {
