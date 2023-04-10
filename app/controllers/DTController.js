@@ -77,7 +77,7 @@ const deleteDT = (req, res) => {
         res.status(200).json({
           status: "success",
           message: "detail_transaksi deleted successfully",
-          data: seminar,
+          data: detail_transaksi,
         });
       })
       .catch((error) => {
