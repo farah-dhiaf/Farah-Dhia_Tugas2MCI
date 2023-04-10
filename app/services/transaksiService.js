@@ -32,7 +32,7 @@ const updateTransaksi = async (data, id) => {
 
 const deleteTransaksi = async (id) => {
     try{
-        const transaksi = transaksiRepository.deleteTransaksi(nrp);
+        const transaksi = transaksiRepository.deleteTransaksi(id);
         return transaksi;
     }
     catch(err){

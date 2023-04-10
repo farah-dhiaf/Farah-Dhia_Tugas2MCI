@@ -32,7 +32,7 @@ const updateDT = async (data, id) => {
 
 const deleteDT = async (id) => {
     try{
-        const detail_transaksi = DTRepository.deleteDT(nrp);
+        const detail_transaksi = DTRepository.deleteDT(id);
         return detail_transaksi;
     }
     catch(err){
