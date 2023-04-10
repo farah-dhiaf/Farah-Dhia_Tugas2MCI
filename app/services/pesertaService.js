@@ -2,8 +2,8 @@ const pesertaRepository = require('../repositories/pesertaRepository');
 
 const getAllPeserta = async () => {
     try{
-        const pesertas = pesertaRepository.getAllPeserta();
-        return pesertas;
+        const peserta = pesertaRepository.getAllPeserta();
+        return peserta;
     }
     catch(err){
         throw err;
