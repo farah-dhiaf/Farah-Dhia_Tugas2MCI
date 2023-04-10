@@ -1,4 +1,4 @@
-const pesertaRepository = require('../repositories/seminarRepository');
+const pesertaRepository = require('../repositories/pesertaRepository');
 
 const getAllPeserta = async () => {
     try{
