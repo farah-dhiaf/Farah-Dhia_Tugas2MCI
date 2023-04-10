@@ -46,7 +46,7 @@ const createDT = (req, res) => {
 
 const updateDT = (req, res) => {
     const data = req.body;
-    const id = req.params.nrp;
+    const id = req.params.id;
     DTService.updateDT(data, id)
     .then(detail_transaksi => {
         if(!detail_transaksi){

@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('pesertas', [
+    await queryInterface.bulkInsert('peserta', [
       {
         nama: 'Lee Heeseung',
         jenis_kelamin: true,

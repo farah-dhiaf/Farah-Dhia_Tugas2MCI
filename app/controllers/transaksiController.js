@@ -46,7 +46,7 @@ const createTransaksi = (req, res) => {
 
 const updateTransaksi = (req, res) => {
     const data = req.body;
-    const id = req.params.nrp;
+    const id = req.params.id;
     transaksiService.updateTransaksi(data, id)
     .then(transaksi => {
         if(!transaksi){
